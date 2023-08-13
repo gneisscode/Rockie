@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useRef } from "react";
+import { useScroll, motion } from "framer-motion";
 
 const Creators = () => {
+   const ref = useRef();
+   const { scrollYProgress } = useScroll({
+     target: ref,
+     offset: ["start end", "center end"],
+   });
   const creators = [
     {
       name: "Kevin Smith",
@@ -37,7 +43,7 @@ const Creators = () => {
     },
   ];
   return (
-    <div>
+    <motion.div ref={ref} style={{scale:scrollYProgress, opacity:scrollYProgress}}>
       <div className="w-[100%]  mt-[48px] px-2 lg:pl-[64.81px] font-Didact Gothic">
         <div className="w-[228px] font-normal text-4xl">
           Top
@@ -64,7 +70,7 @@ const Creators = () => {
           })}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

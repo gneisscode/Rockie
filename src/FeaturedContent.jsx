@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useRef } from "react";
+import { useScroll, motion } from "framer-motion";
 
 const FeaturedContent = () => {
+  const ref = useRef();
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "center end"],
+  });
   return (
-    <div className="w-[100%]  mt-[48px] px-2 lg:px-[64.81px] font-Didact Gothic">
+     <motion.div ref={ref} style={{scale:scrollYProgress, opacity:scrollYProgress}} className="w-[100%]  mt-[48px] px-2 lg:px-[64.81px] font-Didact Gothic">
       <div className="w-[228px] font-normal text-4xl">
         Featured
         <span>
@@ -33,8 +39,8 @@ const FeaturedContent = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
-}
+};
 
-export default FeaturedContent
+export default FeaturedContent;
