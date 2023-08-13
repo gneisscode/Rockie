@@ -45,7 +45,7 @@ const [mobileNav, setMobileNav] = useState(false)
               handleClick(e);
             }}
           ></i>
-          <div className="flex flex-col justify-center items-center min-w-[60%] border-r border-[#817f7f] gap-[46.86px] px-[68px] font-medium">
+          <div className="flex flex-col justify-center items-center min-w-[60%] border-[#817f7f] gap-[46.86px] px-[68px] font-medium">
             {navItems.map((item, index) => {
               return (
                 <div>
