@@ -15,11 +15,11 @@ const Categories = () => {
     <div className=" hidden lg:grid grid-cols-4 px-2 lg:px-[69px] py-8 lg:gap-[98px] mt-[80.57px] w-[100%] h  bg-[#212121]">
       {categories.map(({label, value}, index) => {
         return (
-            <div key={index} className='flex gap-2'>
-                <div className='text-4xl self-end'>{label}</div>
-                <div className='text-xs self-end'>{value}</div>
-            </div>
-        )
+          <div key={index} className="flex gap-2 font-Didact Gothic">
+            <div className="text-4xl self-end">{label}</div>
+            <div className="text-xs self-end">{value}</div>
+          </div>
+        );
       })}
     </div>
   );

@@ -38,13 +38,13 @@ const Creators = () => {
   ];
   return (
     <div>
-      <div className="w-[100%]  mt-[48px] pl-[64.81px]">
+      <div className="w-[100%]  mt-[48px] px-2 lg:pl-[64.81px] font-Didact Gothic">
         <div className="w-[228px] font-normal text-4xl">
           Top
           <span>
             &nbsp;Creators
-            <div className="flex justify-center ml-20 mt-2">
-              <img src="/images/line.svg" />
+            <div className="flex justify-center ml-10 mt-2">
+              <img src="/images/line.svg" className="min-w-[99.45px]" />
             </div>
           </span>
         </div>
@@ -52,9 +52,12 @@ const Creators = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-[27.44] mt-[35px] w-[100%] lg:pr-[80.89px]">
           {creators.map(({ name, content, image }, index) => {
             return (
-              <div key={index} className="flex flex-col items-center gap-2 mb-4">
+              <div
+                key={index}
+                className="flex flex-col items-center gap-2 mb-4"
+              >
                 <img src={image} className="lg:w-[314px] lg:h-[314px]" />
-                <div className=" text-[18px] font-medium">{name}</div>
+                <div className=" text-[18px] font-bold">{name}</div>
                 <div className=" font-normal text-sm">{content}</div>
               </div>
             );

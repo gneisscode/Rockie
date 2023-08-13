@@ -2,6 +2,9 @@ import react, { useState } from "react";
 import "./App.css";
 import Categories from "./Categories";
 import Creators from "./Creators";
+import FeaturedContent from "./FeaturedContent";
+import Trusted from "./Trusted";
+import Footer from "./Footer";
 
 function App() {
   const navItems = ["About", "Brands", "Content", "Pricing", "FAQs"];
@@ -27,6 +30,11 @@ function App() {
         </div>
         <div className="flex self-center m-auto cursor-pointer font-medium justify-center items-center min-w-[81.22px] h-[24.52px] px-[40px] py-[20px] border border-[#817f7f]">
           Log In
+        </div>
+      </div>
+      <div className=" flex  justify-center w-[100%] min-h-[96.48px] border-b border-[#817f7f] lg:hidden">
+        <div className="w-[195.3px] min-h-[100%] flex justify-center items-center border-r border-[#817f7f] font-bold text-[40px] px-[65px]">
+          Rockie.
         </div>
       </div>
 
@@ -93,7 +101,6 @@ function App() {
                 src="/images/image-lady.svg"
                 className="absolute top-[-10.5px]"
               />
-             
             </div>
             <div className="relative mt-[-44px]">
               <img src="/images/rectangle-539.svg" />
@@ -105,13 +112,16 @@ function App() {
                 src="/images/star-3.svg"
                 className=" absolute top-[-82.5px] right-[24.75px]"
               />
-              </div>
+            </div>
           </div>
         </div>
       </div>
 
       <Categories />
       <Creators />
+      <FeaturedContent />
+      <Trusted />
+      <Footer />
     </div>
   );
 }
